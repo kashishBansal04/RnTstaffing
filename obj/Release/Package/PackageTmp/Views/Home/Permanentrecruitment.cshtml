@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "Permanentstaffing";
+}
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    /* Create two equal columns that floats next to each other */
+    .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+        height: 600px; /* Should be removed. Only for demonstration */
+        width: 50%;
+        padding-top: 20px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+
+    @@media screen and (max-width: 600px) {
+        .column {
+            width: 100%;
+        }
+    }
+</style>
+
+
+<h2 style="text-align: center; background-color: white; width:100%">
+    Permanent Recruitment
+</h2>
+<div class="row">
+    <div class="column">
+        <img src="~/Images/permanent.png" alt="Los Angeles" style="height:100%; width:100%">
+    </div>
+
+    <div class="column">
+        <p style="text-align:center;padding-left:12%;padding-right:12%; padding-top:25%">
+
+            We undertake end to end recruitment process for your starting from sourcing of candidate to
+            salary negotiation with candidate. Getting right candidate at right time is every HR managers
+            dream. We have considerable expertise in providing permanent staffing at various level.
+            Our streamlined system is tuned to understand the client requirement and select the right
+
+            candidate that match their needs, both technically and culturally.
+
+            Our permanent staffing selection process:
+            <ul style="padding-left:15%;padding-right:10%;">
+                <li>Selecting the qualify candidate from our wide database.</li>
+                <li>Selecting the perfect candidate through advertisement.</li>
+                <li>Selecting the perfect candidate through social networking sites, references, etc.</li>
+            </ul>
+            
+        </p>
+    </div>
+</div>

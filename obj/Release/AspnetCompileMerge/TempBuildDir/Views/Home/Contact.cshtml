@@ -1,0 +1,97 @@
+﻿@model WebKashish.Models.Contact
+
+@{
+    ViewBag.Title = "Contact";
+}
+<h2 style="text-align:center">@ViewBag.Title</h2>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    /* Create two equal columns that floats next to each other */
+
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+
+
+    .Column {
+        float: left;
+        text-align: center;
+        width: 50%;
+        padding: 10px;
+        padding-top: 20px;
+        padding-left: 20px;
+        height: 300px;
+    }
+</style>
+
+
+<div class="row">
+
+
+    <div class="Column" style="padding-left:20px; float:left">
+        <address>
+            Gali No. 2<br />
+            Bhrampuri Ghookna<br />
+            near Singhal Electricals<br/>
+            Ghaziabad<br/>
+            <abbr title="Phone">Phone:</abbr>
+            7017201140
+        </address>
+
+        <address>
+            <strong>Support:</strong>   <a href="info@rntstaffing.com">info@rntstaffing.com</a><br />
+            @*<strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>*@
+        </address>
+    </div>
+
+    <div class="Column">
+        @using (Html.BeginForm("Contact","Home",FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Name, new { @style = "float:left" })
+                    <div>
+                        @Html.TextBoxFor(model => model.Name, new { @style = "width:500px" })
+                        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.EmailId, new { @style = "float:left" })
+                    <div>
+                        @Html.TextBoxFor(model => model.EmailId, new { @style = "width:500px;"})
+                        @Html.ValidationMessageFor(model => model.EmailId, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Message, new { @style = "float:left" })
+                    <div>
+                        @Html.TextAreaFor(model => model.Message, new { @style = "width:500px; height:100px"})
+                        @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Submit" class="btn btn-success" />
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

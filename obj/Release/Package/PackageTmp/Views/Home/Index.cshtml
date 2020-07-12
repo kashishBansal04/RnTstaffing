@@ -1,0 +1,185 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<style>
+    
+    * {
+        box-sizing: border-box;
+    }
+
+    /* Create two equal columns that floats next to each other */
+    .column {
+        float: left;
+
+        width: 20%;
+        padding: 10px;
+        padding-top:20px;
+        padding-left:20px;
+        height: 200px; /* Should be removed. Only for demonstration */
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+
+    }
+    .row {
+        margin-right: 0px;
+        margin-left:0px;
+    }
+
+    .ColumnNew {
+        float:left;
+        text-align:center;
+        width: 49%;
+        padding: 10px;
+        padding-top: 20px;
+        padding-left: 20px;
+        height: 200px;
+    }
+    .carousel-inner{
+        height:600px;
+    }
+
+    @@media screen and (max-width: 600px) {
+        .column {
+    width: 100%;
+  }
+  .ColumnNew{
+      width:100%;
+  }
+  .carousel-inner{
+      height:300px;
+  }
+}
+</style>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" style="width:100%">
+        <div class="item active" style="height:inherit; width:100%">
+            <img src="~/Images/business-communication-company-computer-wallpaper-preview.jpg" alt="Los Angeles" style="height:inherit; width:100%">
+        </div>
+        <div class="item" style="height:inherit; width:100%">
+            <img src="~/Images/human-resources-hr-management-recruitment-260nw-1121392974.png" alt="Los Angeles" style="height:inherit; width:100%">
+        </div>
+
+        <div class="item" style="height:inherit; width:100%">
+            <img src="~/Images/enter-klavisha-strelka.jpg" alt="Chicago" style="height:inherit; width:100%">
+        </div>
+
+        <div class="item" style="height:inherit; width:100%">
+            <img src="~/Images/abac5203914d654d42ea84b512be90b4.jpg" alt="New York" style="height:inherit; width:100%">
+        </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<div style="padding-bottom:20px">
+    <h2 style="text-align:center">
+        About Us
+    </h2>
+    <p style="text-align:center;padding-left:12%;padding-right:12%">
+
+        We, RnT Staffing solutions brings down the expertise of passionate headhunters who have been a key
+        player in placing exceptional talent for high-end technology companies and startups.
+        Our team consists of dedicated recruiters who will understand your business needs and can deliver in
+        most efficient way in minimal turnaround time.
+        Because we believe good services in good business. With the cutthroat a competition in the market and
+        change being the only constant, it’s imperative for the corporate and the popular business houses to
+        alter their business priorities and strategies more frequently than one would be willing to do so.
+        Our idea being complete customer oriented which makes us a customer oriented company. With the
+        diverse skills of our team, we are more than capable to create a dynamic, holistic and scable
+        developments that is bent on delivering exceptional ROI (Return on Investment) for our esteemed
+        clients and their customer by delivering beyond their expectation by walking the extra mile so that they
+        achieve their business goal.
+    </p>
+</div>
+
+<div style="padding-top:10px; background-color:#eee">
+
+    <h2 style="text-align:center">
+        Why Choose Us
+    </h2>
+
+    <div class="row">
+        <div class="column">
+            <h3> HAWK-EYE</h3>
+            <p>On Market, Talent and Business. </p>
+
+        </div>
+        <div class="column">
+            <h3> BETTER TAT</h3>
+            <p>
+                Fastest delivery with exceptional quality every time.
+            </p>
+
+        </div>
+        <div class="column">
+            <h3> INNOVATIVE</h3>
+            <p>
+                In finding the best solutions of your hiring need.
+            </p>
+
+        </div>
+        <div class="column">
+            <h3> RELIABLE</h3>
+            <p>
+                In your most critical assignments in given specific time.
+            </p>
+
+        </div>
+        <div class="column">
+            <h3>24/7 SUPPORT</h3>
+            <p>
+                Assistance to clients as well as to candidates.
+            </p>
+
+        </div>
+    </div>
+
+</div>
+
+<div style="padding-top:10px; width:100%">
+    <h2 style="text-align:center">
+        Services
+    </h2>
+
+    <div class="row">
+        <div class="ColumnNew">
+            <h3> PERMANENT STAFFING</h3>
+            <p>
+                We undertake end to end recruitment process for your starting from sourcing of
+                candidate to salary negotiation with candidate.@Html.ActionLink("More", "Permanentrecruitment", "Home")
+            </p>
+        </div>
+        <div class="ColumnNew">
+            <h3> CONTRACTUAL STAFFING</h3>
+            <p>
+                Contractual and Temporary Staffing is one of the oldest form of Manpower engagement
+                organization are in a constant need professional to meet their short term and long term goals.@Html.ActionLink("More", "Contractualstaffing", "Home")
+            </p>
+        </div>
+    </div>
+</div>

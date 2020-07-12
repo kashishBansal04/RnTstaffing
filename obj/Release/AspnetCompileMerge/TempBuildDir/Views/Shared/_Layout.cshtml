@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - RnT Staffing</title>
+    @*<link href="~/Content/styles.css" rel="stylesheet" type="text/css" />*@
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>*@
+
+</head>
+
+<body>
+    
+    <div class="navbar navbar-inverse navbar-fixed-top" style="width:100%;padding-left:0px; background-color:black">
+        <div class="container" style="width:100%; padding:0 0 0px 0px">
+            <div class="navbar-header" style="background-color:white">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @*@Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+                <a href="@Url.Action("Index", "Home")" class="navbar-brand" style="background-color:black">
+                    <img src="~/Images/web logo.png" title="title" alt="additional title" style="height:30px; width:200px; text-align:left" />
+                </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav" style="float: right; color:black">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    @*<li>@Html.ActionLink("Why Choose Us", "whychooseus", "Home")</li>*@
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" @*style="color:black; background-color:white"*@>Services<b class="caret"></b></a>
+                        <ul class="dropdown-menu" style="background-color:lightgrey">
+                            <li>@Html.ActionLink("Permanent Staffing", "Permanentrecruitment", "Home")</li>
+                            <li>@Html.ActionLink("Contractual Staffing", "Contractualstaffing", "Home")</li>
+                        </ul>
+                    </li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content" style="width:100%; background-color:white; padding:0px 0px 0px 0px;">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p style="text-align:center">&copy; Developed By Kashish Bansal</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

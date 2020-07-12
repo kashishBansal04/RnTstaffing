@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewBag.Title = "Contractualstaffing";
+}
+
+    <h2 style="        text-align: center;
+        background-color: white
+">
+        Contractual Staffing
+    </h2>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    /* Create two equal columns that floats next to each other */
+    .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+        height: 600px; /* Should be removed. Only for demonstration */
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .column {
+        padding-top: 20px;
+    }
+    @@media screen and (max-width: 600px) {
+        .column{
+            width:100%;
+        }
+    }
+</style>
+
+<div class="row">
+    <div class="column" @*style="padding-top:20px"*@>
+        <img src="~/Images/contractual.png" alt="Los Angeles" style="height:100%; width:100%">
+    </div>
+
+    <div class="column" @*style="padding-top:20px"*@>
+        <p style="text-align:center;padding-left:12%;padding-right:12%; padding-top:25%">
+
+            Contractual and Temporary Staffing is one of the oldest form of Manpower engagement
+            organization are in a constant need professional to meet their short term and long term goals.
+            Some task and project require a particular skill set and expertise for a limited period of time that
+            can be catered through contractual employment which is feasible alternative to permanent
+
+            employment.
+
+            In temporary staffing a worker works with a client company but is on the payroll of a third
+
+            parting staffing
+
+        </p>
+    </div>
+</div>
